@@ -50,7 +50,7 @@ jobs:
         with:
           client-id: ${{ secrets.AZURE_CLIENT_ID }}
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-          subscription-id: 'dfc79d96-ec2d-4f98-a8b1-b553e7c06376'
+          subscription-id: '8e56a151-a6a5-4c15-94fc-20459cc65f3b'
           allow-no-subscriptions: true
 
       - name: Create Deployment Slot
