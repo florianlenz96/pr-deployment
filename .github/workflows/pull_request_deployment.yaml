@@ -25,5 +25,5 @@ jobs:
 
       - name: Create Deployment Slot
         run: |
-          $SLOT_NAME=pr-${{ github.event.number }}
+          $SLOT_NAME="pr-${{ github.event.number }}"
           az webapp deployment slot create --name prdeploymentwebapp -webapp --resource-group prdeployment --slot $SLOT_NAME
