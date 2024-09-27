@@ -45,12 +45,13 @@ jobs:
         with:
           name: .net-app
 
-      - name: Login to Azure
-        uses: azure/login@v1
+      - name: Login to Azure using OIDC
+        uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_20155DA83072455BBB209C43BB0C2CD8 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_3E6BD86DD9084696977141A6C8FBD1FA }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_151F515E483E4BFAAC303C09D4758FE4 }}
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          allow-no-subscriptions: true
 
       - name: Create Deployment Slot
         run: |
@@ -70,12 +71,13 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - name: Login to Azure
+      - name: Login to Azure using OIDC
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_20155DA83072455BBB209C43BB0C2CD8 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_3E6BD86DD9084696977141A6C8FBD1FA }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_151F515E483E4BFAAC303C09D4758FE4 }}
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          allow-no-subscriptions: true
 
       - name: Delete Deployment Slot
         run: |
