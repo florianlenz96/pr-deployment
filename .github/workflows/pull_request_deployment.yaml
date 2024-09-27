@@ -48,9 +48,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_20155DA83072455BBB209C43BB0C2CD8 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_3E6BD86DD9084696977141A6C8FBD1FA }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_151F515E483E4BFAAC303C09D4758FE4 }}
 
       - name: Create Deployment Slot
         run: |
