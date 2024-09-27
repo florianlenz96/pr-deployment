@@ -64,7 +64,7 @@ jobs:
         with:
           app-name: 'prdeploymentwebapp'
           slot-name: 'pr-${{ github.event.number }}'
-          package: './.net-app'
+          package: .
           
   cleanup:
     if: github.event.action == 'closed'
