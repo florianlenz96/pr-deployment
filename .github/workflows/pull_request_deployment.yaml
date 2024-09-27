@@ -56,13 +56,13 @@ jobs:
       - name: Create Deployment Slot
         run: |
           SLOT_NAME=pr-${{ github.event.number }}
-          az webapp deployment slot create --name prdeployment-webapp --resource-group YourResourceGroup --slot $SLOT_NAME
+          az webapp deployment slot create --name prdeploymentwebapp -webapp --resource-group prdeployment --slot $SLOT_NAME
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'prdeployment-webapp'
+          app-name: 'prdeploymentwebapp'
           slot-name: 'pr-${{ github.event.number }}'
           package: './deploy'
 
