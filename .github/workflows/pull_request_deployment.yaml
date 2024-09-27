@@ -48,10 +48,10 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: 'b6ddf09a-d1ae-41d9-ab17-27f0c9d0007e'
-          client-secret: 'COG8Q~myBR33J3BXJYw7u3OhkSOvzAFs_NlRYcXi'
-          tenant-id: '960eb600-b7c2-4578-951f-16b91d9a10c7'
-          subscription-id: '8e56a151-a6a5-4c15-94fc-20459cc65f3b'
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          client-secret: ${{ secrets.AZURE_CLIENT_SECRET }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
       - name: Create Deployment Slot
         run: |
@@ -79,10 +79,10 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: 'b6ddf09a-d1ae-41d9-ab17-27f0c9d0007e'
-          client-secret: 'COG8Q~myBR33J3BXJYw7u3OhkSOvzAFs_NlRYcXi'
-          tenant-id: '960eb600-b7c2-4578-951f-16b91d9a10c7'
-          subscription-id: '8e56a151-a6a5-4c15-94fc-20459cc65f3b'
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          client-secret: ${{ secrets.AZURE_CLIENT_SECRET }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
       - name: Delete Deployment Slot
         run: |
