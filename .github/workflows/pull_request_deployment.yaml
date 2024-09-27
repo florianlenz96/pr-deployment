@@ -87,4 +87,4 @@ jobs:
       - name: Delete Deployment Slot
         run: |
           $SLOT_NAME="pr-${{ github.event.number }}"
-          az webapp deployment slot delete --name prdeploymentwebapp --resource-group prdeployment --slot $SLOT_NAME --no-wait
+          az webapp deployment slot delete --name prdeploymentwebapp --resource-group prdeployment --slot $SLOT_NAME
